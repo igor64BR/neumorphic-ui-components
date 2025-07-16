@@ -1,7 +1,8 @@
 import NeuComponent from "./components/NeuComponent/NeuComponent";
 import "./css/style.css";
 import "./css/led-checkbox.css";
-import "./css/top-bottom-button.css"
+import "./css/top-bottom-button.css";
+import "./css/square-switch-button.css";
 import LikeBtn from "./components/LikeBtn/LikeBtn";
 
 export default function HomePage() {
@@ -9,6 +10,26 @@ export default function HomePage() {
         <div className="body">
             <h1>Neumorphic Components</h1>
             <div className="grid-container">
+                <NeuComponent name="Square 3D Switch Button">
+                    <div>
+                        <input type="checkbox" id="square-switch"/>
+                        <label htmlFor="square-switch">
+                            <div className="square-switch-body">
+                                <div className="square-switch-lever">
+                                    <div className="switch-lever-texture-point"></div>
+                                    <div className="switch-lever-texture-point"></div>
+                                    <div className="switch-lever-texture-point"></div>
+                                    <div className="switch-lever-texture-point"></div>
+                                    <div className="switch-lever-texture-point"></div>
+                                    <div className="switch-lever-texture-point"></div>
+                                    <div className="switch-lever-texture-point"></div>
+                                    <div className="switch-lever-texture-point"></div>
+                                    <div className="switch-lever-texture-point"></div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </NeuComponent>
                 <NeuComponent name="Animated Like Button">
                     <LikeBtn/>
                 </NeuComponent>
