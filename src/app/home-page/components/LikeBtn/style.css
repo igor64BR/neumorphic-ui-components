@@ -1,0 +1,91 @@
+.like-btn-container {
+    background-color: transparent;
+    width: 8rem;
+    height: 3rem;
+    color: darkgray;
+    padding: 5px 3px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: content-box;
+
+    box-shadow: 
+        inset 0px -2px 8px rgba(0, 0, 0, .3);
+
+    border-radius: 21px;
+    border: 8px solid rgb(255, 227, 230);
+
+    scale: 1;
+
+    transition: scale .2s, border .2s;
+}
+
+.like-btn-container h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.svg-container {
+    width: 15px;
+    height: 15px;
+    position: relative;
+}
+
+.like-btn-container svg {
+    color: rgb(241, 60, 60);
+    position: absolute;
+    scale: 1.5;
+}
+
+#fill-svg {
+    opacity: 0;
+    transition: .2s;
+}
+
+@keyframes shiningBorder {
+    0% {
+        border-color: rgb(255, 227, 230);   
+    }
+
+    50% {
+        border-color: red;
+    }
+
+    100% {
+        border-color: rgb(255, 227, 230);
+    }
+}
+
+.like-btn-container:hover {
+    scale: 1.1;
+    animation: shiningBorder 1.2s infinite;
+}
+
+@keyframes beatingHeart {
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.15);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.15);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+}
+
+.like-btn-container:hover #fill-svg {
+    opacity: 1;
+    animation: beatingHeart 1.2s infinite;
+}

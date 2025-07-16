@@ -1,0 +1,40 @@
+.top-bottom-button {
+    background-color: transparent;
+    border: none;
+
+    color: black;
+    font-size: large;
+    padding: 1rem 2rem;
+
+    border-radius: 10px;
+
+    box-shadow: 
+        6px 6px 13px rgba(0, 0, 0, .2),
+        -6px -6px 13px rgba(255, 255, 255, .8),
+        inset 6px 6px 13px rgba(0, 0, 0, 0),
+        inset -6px -6px 13px rgba(255, 255, 255, 0);
+
+    transition: all .2s;
+    box-sizing: border-box;
+}
+
+.top-bottom-button:active {
+    box-shadow: 
+        6px 6px 13px rgba(0, 0, 0, 0),
+        -6px -6px 13px rgba(255, 255, 255, 0),
+        inset 6px 6px 13px rgba(0, 0, 0, .2),
+        inset -6px -6px 13px rgba(255, 255, 255, .8);
+}
+
+.top-bottom-button p {
+    position: relative;
+    left: 0;
+    top: 0;
+
+    transition: .1s;
+}
+
+.top-bottom-button:active p {
+    left: 1px;
+    top: 1px;
+}
