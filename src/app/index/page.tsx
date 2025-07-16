@@ -7,6 +7,10 @@ import GlassButton from "../__components/GlassButton/GlassButton";
 
 
 export default function Home() {
+  const onSendButton = () => {
+    window.location.href = "home-page";
+  };
+
   return (
     <>
       <div className="body flex-centered">
@@ -27,7 +31,7 @@ export default function Home() {
             </div>
             <ToggleButton onToggle={(value) => {console.log(value)}}>Receber informações por e-mail</ToggleButton>
           </form>
-          <GlassButton>Enviar</GlassButton>
+          <GlassButton onClick={onSendButton}>Enviar</GlassButton>
         </div>
       </div>
     </>

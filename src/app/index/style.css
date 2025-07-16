@@ -1,6 +1,9 @@
 .body {
     height: 100%;
     background-color: #793939;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .neu-container {

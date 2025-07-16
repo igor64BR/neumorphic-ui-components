@@ -1,0 +1,11 @@
+.neu-component {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid lightgray;
+    border-radius: 21px;
+    margin: 13px;
+}
