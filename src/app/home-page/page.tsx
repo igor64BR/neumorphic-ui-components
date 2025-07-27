@@ -9,7 +9,7 @@ export default function HomePage() {
     return (
         <div className="body">
             <h1>Neumorphic Components</h1>
-            <div className="grid-container">
+            <div className="component-container">
                 <NeuComponent name="Square 3D Switch Button">
                     <div>
                         <input type="checkbox" id="square-switch"/>

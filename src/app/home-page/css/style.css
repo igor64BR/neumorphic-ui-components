@@ -3,15 +3,21 @@
     height: 100%;
     background-color: #e8e8e8;
     color: black;
+    padding-top: 50px;
 }
 
 .body h1 {
     text-align: center;
-    margin-top: 20px;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 16px;
+.component-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.component-container > * {
+    -webkit-user-select: none;
+    user-select: none;
 }
