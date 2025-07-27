@@ -10,14 +10,14 @@
     text-align: center;
 }
 
-.component-container {
+.componentContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 5%;
 }
 
-.component-container > * {
+.componentContainer > * {
     -webkit-user-select: none;
     user-select: none;
 }

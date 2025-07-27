@@ -1,30 +1,30 @@
 import NeuComponent from "./components/NeuComponent/NeuComponent";
-import "./css/style.css";
-import "./css/led-checkbox.css";
-import "./css/top-bottom-button.css";
-import "./css/square-switch-button.css";
+import style from "./css/style.module.css";
+import ledCheckbox from "./css/led-checkbox.module.css";
+import topBottomButton from "./css/top-bottom-button.module.css";
+import squareSwitchButton from "./css/square-switch-button.module.css";
 import LikeBtn from "./components/LikeBtn/LikeBtn";
 
 export default function HomePage() {
     return (
-        <div className="body">
+        <div className={style.body}>
             <h1>Neumorphic Components</h1>
-            <div className="component-container">
+            <div className={style.componentContainer}>
                 <NeuComponent name="Square 3D Switch Button">
                     <div>
-                        <input type="checkbox" id="square-switch"/>
-                        <label htmlFor="square-switch">
-                            <div className="square-switch-body">
-                                <div className="square-switch-lever">
-                                    <div className="switch-lever-texture-point"></div>
-                                    <div className="switch-lever-texture-point"></div>
-                                    <div className="switch-lever-texture-point"></div>
-                                    <div className="switch-lever-texture-point"></div>
-                                    <div className="switch-lever-texture-point"></div>
-                                    <div className="switch-lever-texture-point"></div>
-                                    <div className="switch-lever-texture-point"></div>
-                                    <div className="switch-lever-texture-point"></div>
-                                    <div className="switch-lever-texture-point"></div>
+                        <input type="checkbox" id={squareSwitchButton.squareSwitchId}/>
+                        <label htmlFor={squareSwitchButton.squareSwitchId}>
+                            <div className={squareSwitchButton.squareSwitchBody}>
+                                <div className={squareSwitchButton.squareSwitchLever}>
+                                    <div className={squareSwitchButton.switchLeverTexturePoint}></div>
+                                    <div className={squareSwitchButton.switchLeverTexturePoint}></div>
+                                    <div className={squareSwitchButton.switchLeverTexturePoint}></div>
+                                    <div className={squareSwitchButton.switchLeverTexturePoint}></div>
+                                    <div className={squareSwitchButton.switchLeverTexturePoint}></div>
+                                    <div className={squareSwitchButton.switchLeverTexturePoint}></div>
+                                    <div className={squareSwitchButton.switchLeverTexturePoint}></div>
+                                    <div className={squareSwitchButton.switchLeverTexturePoint}></div>
+                                    <div className={squareSwitchButton.switchLeverTexturePoint}></div>
                                 </div>
                             </div>
                         </label>
@@ -34,16 +34,16 @@ export default function HomePage() {
                     <LikeBtn/>
                 </NeuComponent>
                 <NeuComponent name="Top Bottom Button">
-                    <button className="top-bottom-button" type="button">
+                    <button className={topBottomButton.topBottomButton} type="button">
                         <p>Click me!</p>
                     </button>
                 </NeuComponent>
                 <NeuComponent name="Switch Button">
-                    <div className="led-checkbox-container">
-                        <input id="switch-checkbox" type="checkbox" name="switch-checkbox"/>
-                        <label id="switch-checkbox-label" htmlFor="switch-checkbox">
-                            <div className="moving-led-container">
-                                <div className="moving-led"></div>
+                    <div className={ledCheckbox.ledCheckboxContainer}>
+                        <input id={ledCheckbox.switchCheckbox} type="checkbox" name="switch-checkbox"/>
+                        <label id={ledCheckbox.switchCheckboxLabel} htmlFor={ledCheckbox.switchCheckbox}>
+                            <div className={ledCheckbox.movingLedContainer}>
+                                <div className={ledCheckbox.movingLed}></div>
                             </div>
                         </label>
                     </div>

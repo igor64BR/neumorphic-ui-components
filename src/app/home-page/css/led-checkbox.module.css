@@ -1,8 +1,8 @@
-.led-checkbox-container > input{
+.ledCheckboxContainer > input{
     display: none;
 }
 
-.led-checkbox-container {
+.ledCheckboxContainer {
     position: relative;
     width: 130px;
     height: 50px;
@@ -12,11 +12,11 @@
         inset 2px 2px 8px rgba(0, 0, 0, .5);
 }
 
-#switch-checkbox-label {
+#switchCheckboxLabel {
     cursor: pointer;
 }
 
-.moving-led-container {
+.movingLedContainer {
     width: 50%;
     height: 90%;
     border-radius: 50px;
@@ -39,7 +39,7 @@
     padding: 0 8px;
 }
 
-.moving-led {
+.movingLed {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -48,13 +48,13 @@
     transition: .5s;
 }
 
-#switch-checkbox:checked + 
-    #switch-checkbox-label .moving-led-container {
+#switchCheckbox:checked + 
+    #switchCheckboxLabel .movingLedContainer {
     left: 47%;
 }
 
-#switch-checkbox:checked +
-    #switch-checkbox-label .moving-led {
+#switchCheckbox:checked +
+    #switchCheckboxLabel .movingLed {
         background-color: yellow;
         box-shadow: 0 0 5px 2px yellow;
     }

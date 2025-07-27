@@ -1,9 +1,9 @@
 declare const styles: {
   readonly "beatingHeart": string;
-  readonly "fill-svg": string;
-  readonly "like-btn-container": string;
+  readonly "fillSvg": string;
+  readonly "likeBtnContainer": string;
   readonly "shiningBorder": string;
-  readonly "svg-container": string;
+  readonly "svgContainer": string;
 };
 export = styles;
 

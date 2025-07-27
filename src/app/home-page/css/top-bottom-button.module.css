@@ -1,4 +1,4 @@
-.top-bottom-button {
+.topBottomButton {
     background-color: transparent;
     border: none;
 
@@ -18,7 +18,7 @@
     box-sizing: border-box;
 }
 
-.top-bottom-button:active {
+.topBottomButton:active {
     box-shadow: 
         6px 6px 13px rgba(0, 0, 0, 0),
         -6px -6px 13px rgba(255, 255, 255, 0),
@@ -26,7 +26,7 @@
         inset -6px -6px 13px rgba(255, 255, 255, .8);
 }
 
-.top-bottom-button p {
+.topBottomButton p {
     position: relative;
     left: 0;
     top: 0;
@@ -34,7 +34,7 @@
     transition: .1s;
 }
 
-.top-bottom-button:active p {
+.topBottomButton:active p {
     left: 1px;
     top: 1px;
 }

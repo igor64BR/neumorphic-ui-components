@@ -1,4 +1,4 @@
-.like-btn-container {
+.likeBtnContainer {
     background-color: transparent;
     width: 8rem;
     height: 3rem;
@@ -21,25 +21,25 @@
     transition: scale .2s, border .2s;
 }
 
-.like-btn-container h1 {
+.likeBtnContainer h1 {
     margin: 0;
     font-size: 1.5rem;
     font-weight: 600;
 }
 
-.svg-container {
+.svgContainer {
     width: 15px;
     height: 15px;
     position: relative;
 }
 
-.like-btn-container svg {
+.likeBtnContainer svg {
     color: rgb(241, 60, 60);
     position: absolute;
     scale: 1.5;
 }
 
-#fill-svg {
+#fillSvg {
     opacity: 0;
     transition: .2s;
 }
@@ -58,7 +58,7 @@
     }
 }
 
-.like-btn-container:hover {
+.likeBtnContainer:hover {
     scale: 1.1;
     animation: shiningBorder 1.2s infinite;
 }
@@ -85,7 +85,7 @@
     }
 }
 
-.like-btn-container:hover #fill-svg {
+.likeBtnContainer:hover #fillSvg {
     opacity: 1;
     animation: beatingHeart 1.2s infinite;
 }
