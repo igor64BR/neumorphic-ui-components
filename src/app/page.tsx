@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export default function IndexPage() {
     useEffect(() => {
-        window.location.href = "/index";
+        window.location.href = "/home-page";
     }, []);
 
     return (
