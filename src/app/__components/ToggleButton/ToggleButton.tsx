@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react";
-import "./style.css"
+import styles from "./style.module.css"
 
 export type ToggleButtonProps = {
     onToggle: (current: boolean) => void;
@@ -18,11 +18,11 @@ export default function ToggleButton({ onToggle, children }: ToggleButtonProps) 
     };
 
     return (
-        <div className="switch-body">
-            <div className="switch-container">
-                <input type="checkbox" className="toggle-checkbox" id="toggle-switch" checked={value} onChange={onChange}/>
-                <label htmlFor="toggle-switch" className="switch">
-                    <div className="toggle">
+        <div className={styles["switch-body"]}>
+            <div className={styles["switch-container"]}>
+                <input type="checkbox" className={styles["toggle-checkbox"]} id="toggle-switch" checked={value} onChange={onChange}/>
+                <label htmlFor="toggle-switch" className={styles["switch"]}>
+                    <div className={styles["toggle"]}>
                         <div className="led"> </div>
                     </div>
                 </label>

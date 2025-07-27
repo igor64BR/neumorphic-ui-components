@@ -1,4 +1,4 @@
-import "./style.css";
+import styles from "./style.module.css";
 
 export type NeuComponentProps = {
     name: string;
@@ -7,7 +7,7 @@ export type NeuComponentProps = {
 
 export default function NeuComponent(props: NeuComponentProps) {
     return (
-        <div className="neu-component">
+        <div className={styles.neuComponent}>
             <h1>{props.name}</h1>
             {props.children}
         </div>

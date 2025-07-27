@@ -1,6 +1,6 @@
 "use client";
 
-import "./style.css";
+import styles from "./style.module.css";
 
 export type GlassButtonProps = {
   children: React.ReactNode;
@@ -9,8 +9,9 @@ export type GlassButtonProps = {
 
 export default function GlassButton({ children, onClick }: GlassButtonProps) {
   return (
-    <div className="glass-button-container">
-        <button type="button" className="glass-button" onClick={onClick}>
+    // <div className="glass-button-container">
+    <div className={styles["glass-button-container"]}>
+        <button type="button" className={styles["glass-button"]} onClick={onClick}>
             {children}
         </button>
     </div>

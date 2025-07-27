@@ -1,10 +1,10 @@
-import "./style.css";
+import styles from "./style.module.css";
 
 
 export default function LikeButtonAnimated() {
     return (
-        <div className="like-btn-container">
-            <div className="svg-container">
+        <div className={styles["like-btn-container"]}>
+            <div className={styles["svg-container"]}>
                 <HeartOutline />
                 <HeartFill />
             </div>
