@@ -1,0 +1,98 @@
+.body {
+  position: relative;
+  transition: 0.3s;
+}
+
+.body:hover {
+  padding: 60px;
+}
+
+.body:hover .item:not(:first-child) {
+  --distance: 50px;
+  scale: 1;
+  transform: translate(
+    calc(var(--distance) * cos(var(--angle))),
+    calc(var(--distance) * sin(var(--angle)))
+  );
+}
+
+.item {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3), -2px -2px 8px white;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 0;
+  background-color: var(--backgroundColor);
+  scale: 0;
+
+  --transition-opts: 0.3s var(--delay);
+  transition: transform var(--transition-opts), scale var(--transition-opts);
+
+  top: 50%;
+}
+
+.item:hover:not(:first-child) {
+  --iconColor: white;
+  background-color: var(--iconBgColor);
+  color: var(--iconColor);
+}
+
+#center {
+  position: relative;
+  z-index: 1;
+  scale: 1;
+}
+
+#discord {
+  --angle: 0deg;
+  --delay: 0s;
+  --iconBgColor: rgb(21, 75, 156);
+}
+
+#twitter {
+  --angle: 45deg;
+  --delay: 0.05s;
+  --iconBgColor: rgb(0, 131, 218);
+}
+
+#messenger {
+  --angle: 90deg;
+  --delay: 0.1s;
+  --iconBgColor: #2b6ce6;
+}
+
+#pinterest {
+  --angle: 135deg;
+  --delay: 0.15s;
+  --iconBgColor: rgb(219, 34, 34);
+}
+
+#instagram {
+  --angle: 180deg;
+  --delay: 0.2s;
+  --iconBgColor: rgb(243, 87, 217);
+}
+
+#snapchat {
+  --angle: 225deg;
+  --delay: 0.25s;
+  --iconBgColor: yellow;
+  --iconColor: black;
+}
+
+#whatsapp {
+  --angle: 270deg;
+  --delay: 0.3s;
+  --iconBgColor: green;
+}
+
+#reddit {
+  --angle: 315deg;
+  --delay: 0.35s;
+  --iconBgColor: red;
+  --iconColor: black;
+}
