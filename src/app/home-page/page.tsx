@@ -4,6 +4,7 @@ import ledCheckbox from "./css/led-checkbox.module.css";
 import topBottomButton from "./css/top-bottom-button.module.css";
 import squareSwitchButton from "./css/square-switch-button.module.css";
 import LikeBtn from "./components/LikeBtn/LikeBtn";
+import "../globals.css";
 
 export default function HomePage() {
     return (
