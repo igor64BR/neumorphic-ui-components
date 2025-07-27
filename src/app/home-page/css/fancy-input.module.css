@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    position: relative;
+    color: var(--foregroundColor);
+}
+
+.input {   
+    padding: 5px;
+    border: 2px solid var(--backgroundColor);
+    background-color: var(--backgroundColor);
+    box-shadow: -2px -2px 5px 2px white, 2px 2px 5px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+}
+
+.label {
+    position: absolute;
+    margin-left: 5px;
+
+    /* Centers the text into the container vertically */
+    top: 50%;
+    transform: translateY(-50%);
+
+    transition: all .2s ease-in-out;
+
+    cursor: text;
+}
+
+.input:valid,
+.input:focus {
+    box-shadow: 
+        -2px -2px 5px 2px white, 
+        2px 2px 5px rgba(0, 0, 0, .3),
+        inset 2px 2px 5px rgba(0, 0, 0, .5), 
+        inset -2px -2px 5px white;
+    outline: none;
+}
+
+.input:valid ~ .label,
+.input:focus ~ .label {
+    top: -50%;
+    margin: 0;
+}
