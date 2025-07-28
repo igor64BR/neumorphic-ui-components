@@ -9,6 +9,7 @@ type OptionProps = {
   color?: string;
 };
 
+// Based on https://uiverse.io/csozidev/lovely-husky-50
 export default function RadioShare({ options }: { options: OptionProps[] }) {
   const radiusStep = 360 / options.length;
 

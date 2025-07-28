@@ -1,12 +1,14 @@
+'use client';
+
 import NeuComponent from './components/NeuComponent/NeuComponent';
 import style from './css/style.module.css';
 import ledCheckbox from './css/led-checkbox.module.css';
 import topBottomButton from './css/top-bottom-button.module.css';
-import squareSwitchButton from './css/square-switch-button.module.css';
 import fancyInput from './css/fancy-input.module.css';
 import '../globals.css';
 import LikeBtn from './components/LikeBtn/LikeBtn';
 import RadioShare from './components/RadioShare/RadioShare';
+import TexturizedSwitch from './components/TexturizedSwitch/TexturizedSwitch';
 
 export default function HomePage() {
   return (
@@ -14,43 +16,9 @@ export default function HomePage() {
       <h1>Neumorphic Components</h1>
       <div className={style.componentContainer}>
         <NeuComponent name="Square 3D Switch Button">
-          {/* https://uiverse.io/njesenberger/rude-stingray-22 */}
-          <div>
-            <input type="checkbox" id={squareSwitchButton.squareSwitchId} />
-            <label htmlFor={squareSwitchButton.squareSwitchId}>
-              <div className={squareSwitchButton.squareSwitchBody}>
-                <div className={squareSwitchButton.squareSwitchLever}>
-                  <div
-                    className={squareSwitchButton.switchLeverTexturePoint}
-                  ></div>
-                  <div
-                    className={squareSwitchButton.switchLeverTexturePoint}
-                  ></div>
-                  <div
-                    className={squareSwitchButton.switchLeverTexturePoint}
-                  ></div>
-                  <div
-                    className={squareSwitchButton.switchLeverTexturePoint}
-                  ></div>
-                  <div
-                    className={squareSwitchButton.switchLeverTexturePoint}
-                  ></div>
-                  <div
-                    className={squareSwitchButton.switchLeverTexturePoint}
-                  ></div>
-                  <div
-                    className={squareSwitchButton.switchLeverTexturePoint}
-                  ></div>
-                  <div
-                    className={squareSwitchButton.switchLeverTexturePoint}
-                  ></div>
-                  <div
-                    className={squareSwitchButton.switchLeverTexturePoint}
-                  ></div>
-                </div>
-              </div>
-            </label>
-          </div>
+          <TexturizedSwitch
+            onValueChange={(value) => window.alert('Value: ' + value)}
+          />
         </NeuComponent>
         <NeuComponent name="Animated Like Button">
           {/* https://uiverse.io/LilaRest/loud-walrus-26 */}
