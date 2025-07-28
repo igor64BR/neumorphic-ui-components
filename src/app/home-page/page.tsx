@@ -2,13 +2,13 @@
 
 import NeuComponent from './components/NeuComponent/NeuComponent';
 import style from './css/style.module.css';
-import ledCheckbox from './css/led-checkbox.module.css';
 import fancyInput from './css/fancy-input.module.css';
 import '../globals.css';
 import LikeBtn from './components/LikeBtn/LikeBtn';
 import RadioShare from './components/RadioShare/RadioShare';
 import TexturizedSwitch from './components/TexturizedSwitch/TexturizedSwitch';
 import NeumorphicButton from './components/NeumorphicButton/NeumorphicButton';
+import OvalSwitch from './components/OvalSwitch/OvalSwitch';
 
 export default function HomePage() {
   function onClick(): void;
@@ -34,29 +34,13 @@ export default function HomePage() {
           <TexturizedSwitch onValueChange={onValueChange} />
         </NeuComponent>
         <NeuComponent name="Animated Like Button">
-          {/* https://uiverse.io/LilaRest/loud-walrus-26 */}
           <LikeBtn />
         </NeuComponent>
         <NeuComponent name="Top Bottom Button">
           <NeumorphicButton onClick={onClick} />
         </NeuComponent>
         <NeuComponent name="Switch Button">
-          {/* https://uiverse.io/chase2k25/fluffy-dog-18 */}
-          <div className={ledCheckbox.ledCheckboxContainer}>
-            <input
-              id={ledCheckbox.switchCheckbox}
-              type="checkbox"
-              name="switch-checkbox"
-            />
-            <label
-              id={ledCheckbox.switchCheckboxLabel}
-              htmlFor={ledCheckbox.switchCheckbox}
-            >
-              <div className={ledCheckbox.movingLedContainer}>
-                <div className={ledCheckbox.movingLed}></div>
-              </div>
-            </label>
-          </div>
+          <OvalSwitch checked onChange={onValueChange} />
         </NeuComponent>
         <NeuComponent name="Fancy Text Input">
           {/* https://uiverse.io/AmIt-DasIT/weak-donkey-85 */}
