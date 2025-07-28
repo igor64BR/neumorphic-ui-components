@@ -9,6 +9,7 @@ import TexturizedSwitch from './components/TexturizedSwitch/TexturizedSwitch';
 import NeumorphicButton from './components/NeumorphicButton/NeumorphicButton';
 import OvalSwitch from './components/OvalSwitch/OvalSwitch';
 import FancyTextInput from './components/FancyTextInput/FancyTextInput';
+import LoadingGraph from './components/LoadingGraph/LoadingGraph';
 
 export default function HomePage() {
   function onClick(): void;
@@ -174,6 +175,9 @@ export default function HomePage() {
               },
             ]}
           />
+        </NeuComponent>
+        <NeuComponent name="Loading Graph">
+          <LoadingGraph />
         </NeuComponent>
       </div>
     </div>

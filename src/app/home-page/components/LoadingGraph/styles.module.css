@@ -1,0 +1,33 @@
+.body {
+  position: relative;
+  height: 120px;
+
+  /* Calc made: 20px long bar + 10px gap (thinking in 4 bars) */
+  width: calc(20px * 4 + 10px * 3);
+}
+
+.graphBar {
+  position: absolute;
+  left: var(--left);
+  bottom: 0;
+  width: 20px;
+  height: 50px;
+  background-color: color-mix(in srgb, var(--backgroundColor) 90%, black);
+  animation: animation 1s var(--delay) infinite;
+
+  box-shadow: inset 2px 0 10px white, inset -2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes animation {
+  0% {
+    height: 50px;
+  }
+
+  50% {
+    height: 100px;
+  }
+
+  100% {
+    height: 50px;
+  }
+}
