@@ -3,32 +3,42 @@
 import NeuComponent from './components/NeuComponent/NeuComponent';
 import style from './css/style.module.css';
 import ledCheckbox from './css/led-checkbox.module.css';
-import topBottomButton from './css/top-bottom-button.module.css';
 import fancyInput from './css/fancy-input.module.css';
 import '../globals.css';
 import LikeBtn from './components/LikeBtn/LikeBtn';
 import RadioShare from './components/RadioShare/RadioShare';
 import TexturizedSwitch from './components/TexturizedSwitch/TexturizedSwitch';
+import NeumorphicButton from './components/NeumorphicButton/NeumorphicButton';
 
 export default function HomePage() {
+  function onClick(): void;
+  function onClick(e: Event): void;
+  function onClick(e?: Event) {
+    if (!e) {
+      return console.log('I was clicked!!!');
+    }
+
+    console.log('I was clicked', e);
+  }
+
+  function onValueChange(value: boolean): void;
+  function onValueChange(value: boolean) {
+    console.log('Value changed:', value);
+  }
+
   return (
     <div className={style.body}>
       <h1>Neumorphic Components</h1>
       <div className={style.componentContainer}>
         <NeuComponent name="Square 3D Switch Button">
-          <TexturizedSwitch
-            onValueChange={(value) => window.alert('Value: ' + value)}
-          />
+          <TexturizedSwitch onValueChange={onValueChange} />
         </NeuComponent>
         <NeuComponent name="Animated Like Button">
           {/* https://uiverse.io/LilaRest/loud-walrus-26 */}
           <LikeBtn />
         </NeuComponent>
         <NeuComponent name="Top Bottom Button">
-          {/* https://uiverse.io/ke1221/ancient-walrus-24 */}
-          <button className={topBottomButton.topBottomButton} type="button">
-            <p>Click me!</p>
-          </button>
+          <NeumorphicButton onClick={onClick} />
         </NeuComponent>
         <NeuComponent name="Switch Button">
           {/* https://uiverse.io/chase2k25/fluffy-dog-18 */}
