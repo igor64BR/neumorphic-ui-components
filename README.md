@@ -1,33 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Welcome to my neumorphic component library!
+📖 This is a Next.js app aimed for studying, replying an creating neumorphic components, exploring at the best html and css features.
 
-## Getting Started
+💡 This repository's goal is training my `HTML`, `CSS` and `React` skills
+and futurely develop my own library or work without depending on any
+UI libs, since none of them solves 100% every system needs.
 
-First, run the development server:
+## 🔨 Skills developed
 
+- Create customized components for modern neumorphic UI
+- Create my own UI library
+- Be indempendent from other UI libraries
+- Be able to create my own designs, with my preferences and ideas
+
+## 🔥 Getting Started
+
+Use your prefered Package Manager. I suggest using `Yarn`, since it's the defined
+in the `package.json` file.
+
+Before first run, install the dependencies using your package manager install command:
+```bash
+npm install
+# or
+yarn
+# or etc.
+```
+
+Then, run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# or etc.
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### ❗ Suggestion
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+If you are working at your own fork of this project, I recommend running in 
+another terminal window, the command `tcm:watch` to update the css modules in 
+real time.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000). The URL will redirect you to 
+`/home-page`, where you can see the library of components i've created so far.
 
-## Learn More
+<p align="center">
+    <img src="./assets/gif/lib-show-2025-07-28.gif" alt="Neumorphic Components Lib" width="50%" />
+</p>
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
