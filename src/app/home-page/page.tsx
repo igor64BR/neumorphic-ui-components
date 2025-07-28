@@ -1,14 +1,14 @@
 'use client';
 
-import NeuComponent from './components/NeuComponent/NeuComponent';
 import style from './css/style.module.css';
-import fancyInput from './css/fancy-input.module.css';
 import '../globals.css';
+import NeuComponent from './components/NeuComponent/NeuComponent';
 import LikeBtn from './components/LikeBtn/LikeBtn';
 import RadioShare from './components/RadioShare/RadioShare';
 import TexturizedSwitch from './components/TexturizedSwitch/TexturizedSwitch';
 import NeumorphicButton from './components/NeumorphicButton/NeumorphicButton';
 import OvalSwitch from './components/OvalSwitch/OvalSwitch';
+import FancyTextInput from './components/FancyTextInput/FancyTextInput';
 
 export default function HomePage() {
   function onClick(): void;
@@ -22,7 +22,8 @@ export default function HomePage() {
   }
 
   function onValueChange(value: boolean): void;
-  function onValueChange(value: boolean) {
+  function onValueChange(value: string): void;
+  function onValueChange(value: boolean | string) {
     console.log('Value changed:', value);
   }
 
@@ -43,19 +44,7 @@ export default function HomePage() {
           <OvalSwitch checked onChange={onValueChange} />
         </NeuComponent>
         <NeuComponent name="Fancy Text Input">
-          {/* https://uiverse.io/AmIt-DasIT/weak-donkey-85 */}
-          <div className={fancyInput.container}>
-            <input
-              type="text"
-              name="text"
-              id="text"
-              className={fancyInput.input}
-              required
-            />
-            <label htmlFor="text" className={fancyInput.label}>
-              Username
-            </label>
-          </div>
+          <FancyTextInput label="Username" onChange={onValueChange} />
         </NeuComponent>
         <NeuComponent name="Animated Share Wheel">
           <RadioShare
