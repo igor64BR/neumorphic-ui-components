@@ -10,6 +10,7 @@ import NeumorphicButton from './components/NeumorphicButton/NeumorphicButton';
 import OvalSwitch from './components/OvalSwitch/OvalSwitch';
 import FancyTextInput from './components/FancyTextInput/FancyTextInput';
 import LoadingGraph from './components/LoadingGraph/LoadingGraph';
+import CopernicusLoading from './components/CopernicusLoading/CopernicusLoading';
 
 export default function HomePage() {
   function onClick(): void;
@@ -178,6 +179,9 @@ export default function HomePage() {
         </NeuComponent>
         <NeuComponent name="Loading Graph">
           <LoadingGraph />
+        </NeuComponent>
+        <NeuComponent name="❗Loading Boss ❗">
+          <CopernicusLoading duration={2.1} quantity={13} />
         </NeuComponent>
       </div>
     </div>

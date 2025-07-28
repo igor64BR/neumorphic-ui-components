@@ -1,0 +1,68 @@
+:root {
+  --hall-width: 17px;
+  --hall-length: 200px;
+}
+
+.body {
+  position: relative;
+  height: 210px;
+  aspect-ratio: 1;
+}
+
+.entityContainer {
+  position: absolute;
+  height: var(--hall-length);
+  aspect-ratio: 1;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ballHall {
+  position: absolute;
+  width: var(--hall-width);
+  height: 100%;
+  background-color: color-mix(in srgb, var(--backgroundColor) 90%, black);
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateZ(var(--angle));
+
+  border-radius: 10px;
+
+  z-index: -1;
+}
+
+@keyframes animation {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: calc(100% - var(--hall-width));
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.transparent {
+  background: transparent;
+}
+
+.ball {
+  position: absolute;
+  background-color: color-mix(in srgb, var(--backgroundColor) 70%, black);
+  width: var(--hall-width);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  z-index: 1;
+
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5), inset 2px 2px 15px white,
+    inset -2px -2px 15px black;
+  transform: rotateZ(calc(var(--angle) * -1));
+
+  animation: animation var(--duration) var(--delay) infinite ease-in-out;
+}
