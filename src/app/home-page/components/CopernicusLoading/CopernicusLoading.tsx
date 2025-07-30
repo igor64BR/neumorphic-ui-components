@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import "./globals.css";
 import styles from './styles.module.css';
 
 type CopernicusLoadingProps = {

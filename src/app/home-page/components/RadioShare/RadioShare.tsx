@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../../globals.css';
+import "./globals.css";
 import styles from './style.module.css';
 
 type OptionProps = {
