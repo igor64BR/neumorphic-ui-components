@@ -1,0 +1,65 @@
+.body {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  background-color: rgb(56, 56, 56);
+  box-shadow: inset 2px 2px 15px 5px black, inset -2px -2px 15px white,
+  -2px -2px 5px 1px white, 2px 2px 5px rgba(0, 0, 0, .7);
+}
+
+.input {
+  display: none;
+}
+
+label.body {
+  position: absolute;
+}
+
+.input:checked ~ .body .circle {
+  transform: translateX(calc(100% + var(--gap) * 2));
+  background-color: rgb(252, 71, 71);
+  box-shadow: inset 2px 2px 8px rgb(253, 116, 116),
+    inset -2px -2px 8px rgb(160, 45, 45);
+  
+}
+
+.input:checked ~ .body .indicator {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.circle {
+  --gap: 5px;
+
+  position: absolute;
+  background-color: rgb(116, 116, 116);
+  height: calc(var(--height) - 2 * var(--gap));
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  top: var(--gap);
+  left: var(--gap);
+
+  box-shadow: inset 2px 2px 8px rgb(194, 194, 194),
+    inset -2px -2px 8px rgb(66, 66, 66);
+
+  transition: 0.5s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.indicator {
+  position: absolute;
+
+  height: 50%;
+  aspect-ratio: 1;
+
+  border-radius: 5px;
+  clip-path: polygon(25% 0, 80% 50%, 25% 100%, 25% 0);
+
+  background-color: rgb(240, 240, 240);
+
+  transition: 0.5s all cubic-bezier(1, 0, 0, 1);
+}

@@ -1,0 +1,5 @@
+:root {
+    --width: 160px;
+    --height: calc(var(--width) / 2);
+    --border-radius: calc(var(--height) / 2);
+}
